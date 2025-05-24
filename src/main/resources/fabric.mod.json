@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "server-ram-cleaner",
+  "version": "${version}",
+  "name": "Server-Ram-Cleaner",
+  "description": "Minecraft performance boost mod",
+  "authors": ["As_pw"],
+  "contact": {
+    "homepage": "https://modrinth.com/project/server-ram-clear"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/server-ram-cleaner/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "aspw.serverramcleaner.serverRamCleaner.MixinLoader"
+    ]
+  },
+  "mixins": [
+    "server-ram-cleaner.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
